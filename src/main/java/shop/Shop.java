@@ -24,10 +24,6 @@ public class Shop {
         return shopName;
     }
 
-    public void setShopName(String shopName) {
-        this.shopName = shopName;
-    }
-
     public int getStockCount(){
         return this.shopStock.size();
     }

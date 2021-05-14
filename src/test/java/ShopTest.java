@@ -1,6 +1,8 @@
+import Instruments.Accessory;
 import Instruments.Drums;
 import Instruments.GuitarBass;
 import Instruments.Keyboard;
+import Instruments.instrumentTypes.AccessoryType;
 import Instruments.instrumentTypes.DrumType;
 import Instruments.instrumentTypes.GuitarBassType;
 import Instruments.instrumentTypes.KeyboardType;
@@ -15,12 +17,14 @@ public class ShopTest {
 
     Shop shop;
     Item item1, item2, item3;
+    Accessory item4;
 
     @Before
     public void setUp(){
         item1 = new GuitarBass(850.00, 1200.00, "Fender", "Coronado XII", GuitarBassType.ELECTRIC12);
         item2 = new Keyboard(1100.00, 1500.00, "Fender", "Rhodes", KeyboardType.RHODES);
         item3 = new Drums(400.00, 750.00, "Mapex", "Tornado III", DrumType.FULLKIT);
+        item4 = new Accessory(15.00, 25.00, "Ernie Ball Super Slinkies", AccessoryType.GUITARSTRINGS);
         shop = new Shop("Deano's Music Shack");
     }
 
@@ -52,6 +56,15 @@ public class ShopTest {
         shop.addItemToStock(item2);
         shop.addItemToStock(item3);
         assertEquals(1100.00 ,shop.getStockProfit(), 0.01);
+    }
+
+    @Test
+    public void canAddInstrumentsAndAccessoriesToStock(){
+        shop.addItemToStock(item1);
+        shop.addItemToStock(item2);
+        shop.addItemToStock(item3);
+        shop.addItemToStock(item4);
+        assertEquals(4, shop.getStockCount());
     }
 
 }

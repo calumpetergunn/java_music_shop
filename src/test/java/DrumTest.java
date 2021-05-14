@@ -36,7 +36,7 @@ public class DrumTest {
 
     @Test
     public void canGetCostPrice(){
-        assertEquals(450.00, drums.getCostPrice(), 0.01);
+        assertEquals(400.00, drums.getCostPrice(), 0.01);
     }
 
     @Test
@@ -49,4 +49,6 @@ public class DrumTest {
         assertEquals("Badum bum tssssshh", drums.playInstrument());
     }
 
+    @Test
+    public void canCalculateMarkup() { assertEquals(350.00, drums.calculateMarkup(), 0.01);}
 }
