@@ -1,3 +1,5 @@
+package Instruments;
+
 public enum GuitarBassType {
     ELECTRICGUITAR(6),
     ACOUSTICGUITAR(6),
@@ -5,7 +7,7 @@ public enum GuitarBassType {
     ELECTRIC12(12),
     ACOUSTIC12(12),
     ELECTRICBASS5(5),
-    ELECTRICBASSXI(6);
+    ELECTRICBASSVI(6);
 
     private final int stringNumber;
 
