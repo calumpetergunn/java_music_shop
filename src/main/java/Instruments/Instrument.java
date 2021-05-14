@@ -1,8 +1,9 @@
 package Instruments;
 
+import behaviours.IPlay;
 import shop.Item;
 
-public abstract class Instrument extends Item {
+public abstract class Instrument extends Item implements IPlay {
 
     String brand;
     String model;

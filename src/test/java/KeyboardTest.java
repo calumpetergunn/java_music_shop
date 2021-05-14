@@ -1,7 +1,6 @@
 
-import Instruments.GuitarBassType;
 import Instruments.Keyboard;
-import Instruments.KeyboardType;
+import Instruments.instrumentTypes.KeyboardType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -44,6 +43,11 @@ public class KeyboardTest {
     @Test
     public void canGetSalePrice(){
         assertEquals(1500.00, keyboard.getSalePrice(), 0.01);
+    }
+
+    @Test
+    public void canPlayInstrument(){
+        assertEquals("Plinky Plonky", keyboard.playInstrument());
     }
 
 

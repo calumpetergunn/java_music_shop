@@ -1,5 +1,5 @@
 import Instruments.GuitarBass;
-import Instruments.GuitarBassType;
+import Instruments.instrumentTypes.GuitarBassType;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -42,6 +42,11 @@ public class GuitarBassTest {
     @Test
     public void canGetSalePrice(){
         assertEquals(1200.00, guitarBass.getSalePrice(), 0.01);
+    }
+
+    @Test
+    public void canPlayInstrument(){
+        assertEquals("Widdly widdly woo", guitarBass.playInstrument());
     }
 
 }

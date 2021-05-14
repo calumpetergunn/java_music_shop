@@ -1,5 +1,7 @@
 package Instruments;
 
+import Instruments.instrumentTypes.GuitarBassType;
+
 public class GuitarBass extends Instrument {
 
     private GuitarBassType guitarBassType;
@@ -25,4 +27,7 @@ public class GuitarBass extends Instrument {
         return this.model;
     }
 
+    public String playInstrument() {
+        return "Widdly widdly woo";
+    }
 }

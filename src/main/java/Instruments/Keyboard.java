@@ -1,5 +1,7 @@
 package Instruments;
 
+import Instruments.instrumentTypes.KeyboardType;
+
 public class Keyboard extends Instrument {
 
     private KeyboardType keyboardType;
@@ -25,5 +27,8 @@ public class Keyboard extends Instrument {
         return this.model;
     }
 
+    public String playInstrument() {
+        return "Plinky Plonky";
+    }
 }
 
