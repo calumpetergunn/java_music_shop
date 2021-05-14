@@ -1,6 +1,8 @@
 package shop;
 
-public abstract class Item {
+import behaviours.ISell;
+
+public abstract class Item implements ISell {
 
     double costPrice;
     double salePrice;
@@ -16,5 +18,9 @@ public abstract class Item {
 
     public double getSalePrice() {
         return salePrice;
+    }
+
+    public double calculateMarkup(){
+        return this.salePrice - this.costPrice;
     }
 }

@@ -1,7 +1,6 @@
 package Instruments;
 
 import Instruments.instrumentTypes.DrumType;
-import Instruments.instrumentTypes.KeyboardType;
 
 public class Drums extends Instrument {
 
